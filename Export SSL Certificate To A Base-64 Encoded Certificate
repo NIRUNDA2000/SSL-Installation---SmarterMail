@@ -1,0 +1,12 @@
+Connect to your Windows VPS/Server through Remote Desktop where you have installed SmarterMail.
+Click Start, select Run. Type MMC, hit enter.
+Open File >> Add\Remove Snap ins.
+From the list of available snap-ins, select Certificates and hit Add.
+A new window will appear, choose Computer account and hit Next.
+Ensure local computer is selected and hit Finish.
+In certificate tree view, expand Personal and choose Certificates.
+Right click on certificate you wish to export >> All Tasks >> Export.
+A new window will appear, hit Next.
+Select No, do not export private key >> Next
+Save the certificate as Base 64 x509 .cer file >> Next.
+Save the certificate at location C:\SmarterMail\Certificates\<websitename>. Name the certificate and click Save.
