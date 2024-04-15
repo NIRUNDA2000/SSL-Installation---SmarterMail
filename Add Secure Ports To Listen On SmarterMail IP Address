@@ -1,0 +1,7 @@
+Log in to SmarterMail as admin user.
+Click on Settings icon.
+Expand the Bindings folder and click IP Addresses in the navigation pane.
+Select desired IP address and click Edit.
+Use the checkboxes to select the port(s) you would like the IP address to listen on.
+Click Save.
+Allow the ports 993, 995 and 465 in firewall and verify it by telnet.
