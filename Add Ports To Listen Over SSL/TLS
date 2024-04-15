@@ -1,8 +1,0 @@
-Login to SmarterMail as admin user.
-Click on Settings icon.
-Expand the Bindings folder and click Ports in the navigation pane.
-Click New in the content pane toolbar. A popup window will display.
-Enter required fields; Protocol, Encryption (SSL or TLS), Name, Port and Path of Certificate.
-Click on Verify Certificate to ensure the certificate exists in the specified path.
-Click on Save.
-Using above steps, add POP3, SMTP and IMAP ports to be encrypted with SSL or TLS.
