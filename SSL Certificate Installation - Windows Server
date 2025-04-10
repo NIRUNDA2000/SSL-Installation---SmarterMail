@@ -1,0 +1,56 @@
+Bind SSL to SmarterMail in IIS:
+  > Open IIS Manager.
+  > Locate the SmarterMail website in the Sites list.
+  > Select Bindings > Add > Choose https.
+  > Assign the SSL certificate to the domain.
+
+NOTE: If your SSL certificate is not showing in IIS during the binding process, it may indicate an issue with the certificate installation. 
+      Here are some troubleshooting steps to resolve the issue:
+
+# Verify SSL Certificate Installation
+
+    Open the Certificates MMC:
+      > Press Windows + R, type mmc, and press Enter.
+      > Go to File > Add/Remove Snap-in.
+      > Select Certificates > Add > Choose Computer Account > Next > Local Computer > Finish.
+
+    Navigate to Certificates (Local Computer) > Personal > Certificates.
+      > Check if your SSL certificate is listed here.
+      > If not, the certificate may not have been installed properly.
+
+# Install the SSL Certificate
+
+If the certificate is missing, install it:
+  > Open IIS Manager.
+  > Click on the server name (at the top of the Connections panel).
+  > Double-click Server Certificates in the middle pane.
+  > Click Import in the Actions panel on the right.
+      - Browse to your certificate file (usually .pfx format).
+      - Enter the password for the certificate (if required).
+      - Complete the import process.
+
+
+NOTE: If you cannot see Server Certificates in the IIS Manager, it means the server-level settings are not currently displayed. 
+To resolve this, follow these steps:
+
+Step 1: Navigate to Server-Level Settings
+       > In the Connections panel on the left, select the server name at the very top of the hierarchy (e.g., WIN-VG3F1ER4SPN in your screenshot).
+          - This is the root node for the IIS server configuration.
+       > In the middle pane, locate and double-click Server Certificates.
+
+Step 2: Check for the Certificate
+        > In the Server Certificates window:
+          - Look for your SSL certificate in the list.
+          - If it's not listed, proceed to import the certificate.
+Step 3: Import the Certificate
+        > In the Actions panel on the right, click Import.
+        > Browse to the SSL certificate file (typically a .pfx file).
+        > Enter the password for the certificate (if required).
+        > Complete the import process.
+
+Step 4: Bind the Certificate to SmarterMail
+        > Return to the SmarterMail site in IIS.
+        > Open Bindings in the Actions panel.
+        > Click Add, select https, and choose the certificate from the dropdown.
+
+
